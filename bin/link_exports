@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if [ -f ~/.exports ]; then
+  rm ~/.exports
+fi
+ln -s ~/.dotfiles/exports/.exports ~/.exports

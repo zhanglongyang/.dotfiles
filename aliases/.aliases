@@ -1,0 +1,11 @@
+alias setup='vim ~/.zpreztorc'
+alias update='source ~/.zpreztorc'
+
+alias ws='cd ~/workspace/'
+
+alias pidport=pidportfunction
+pidportfunction() {
+  lsof -n -i4TCP:$1 | grep LISTEN
+}
+
+alias gh="open \`git remote -v | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's/git@/http:\/\//' -e's/\.git$//' | sed -E 's/(\/\/[^:]*):/\1\//'\`"

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+zshrc=~/.zshrc
+if [ -f $zshrc ]; then
+    rm $zshrc
+fi
+ln -s ~/.dotfiles/prezto/.zshrc $zshrc
+
+theme=~/.zprezto/modules/prompt/functions/prompt_mine_setup
+if [ -f $theme ]; then
+  rm $theme
+fi
+ln -s ~/.dotfiles/prezto/prompt_mine_setup $theme
+
+zpreztorc=~/.zpreztorc
+if [ -f $zpreztorc ]; then
+  rm $zpreztorc
+fi
+ln -s ~/.dotfiles/prezto/.zpreztorc $zpreztorc
