@@ -5,6 +5,9 @@ fi
 
 export TERM="xterm-256color"
 
+# enable vi mode for typing in command line
+set -o vi
+
 # Alias
 if [ -f ~/.aliases ]; then
   source ~/.aliases
