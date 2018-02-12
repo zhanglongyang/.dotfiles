@@ -9,3 +9,6 @@ pidportfunction() {
 }
 
 alias gh="open \`git remote -v | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's/git@/http:\/\//' -e's/\.git$//' | sed -E 's/(\/\/[^:]*):/\1\//'\`"
+
+alias drmsc="docker rm $(docker ps -a -q)"
+alias drmni="docker rmi $(docker images | grep "^<none>" | awk "{print $3}")"
